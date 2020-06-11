@@ -19,16 +19,16 @@ int lomuto(int *array, size_t size, ssize_t left, ssize_t right)
 	ssize_t low = left - 1, fast;
 	int pivot = array[right];
 
-	for (fast = left; fast <= right; fast++)
+	for (fast = left; fast <= right - 1; fast++)
 	{
 		if (array[fast] <= pivot)
 		{
 			low += 1;
-			swap(array, size, &array[fast], &array[low]);
+			swap(array, size, &array[low], &array[fast]);
 		}
 	}
 	/**if (fast > right)**/
-		swap(array, size, &array[low], &array[right]);
+		swap(array, size, &array[low + 1], &array[right]);
 	return (low + 1);
 }
 
