@@ -71,15 +71,17 @@ Monty Files:
 
 | File | Description
 | ------------- |:-------------:|
-| monty.h | Header file that contains all the functions and standard C library header file
-| monty.c | Contains the int main(int argc, char **argv)
-| monty_func.c | It contains the functions: ***readfile, isnumber, fork.***
-| monty_math.c | Contains functions math : ***_add, _sub, _mul, _div and others***
-| stack_func.c |  Contains functions create stack and queues: ***_push, _pall, _swat,***
-| stack_func2.c | It contains other functions for print char such as: ***_pchar, _nop***
-| stack_func3.c | Contains function that frees memor and function for print ascii: ***free_dlistint, pstr***
-| bf | It is a directory with .bf files: ***100-holberton.bf and 1001-add.bf***
-| bytecodes | Directory with files test in the program
+| sort.h | Header file that contains all the functions and standard C library header file
+| 0-bubble_sort.c | Contains the
+| 0-O | It contains the function
+| 1-insertion_sort_list.c | Contains functions math :
+| 1-O |  Contains functions 
+| 2-selection_sort.c | It contains other functions
+| 2-O | Contains 
+| 3-quick_sort | It is a
+| 3-O | Directory with files test in the program
+| 100-shell_sort |  Contains functions
+| 101-cocktail_sort_list.c | Contains functions
 
  ## Requirements project
 
@@ -99,6 +101,40 @@ The prototypes of all your functions should be included in your header file call
 -   AllNo list/array does not need to be sorted if its size is less than 2.
 
 ## Tasks
+
+### 0. Bubble sort
+-   Write a function that sorts an array of integers in ascending order using the Bubble sort algorithm
+
+-   CompilingPrototype: void bubble_sort(int *array, size_t size);
+-   You’re expected to print the array after each time you swap two elements (See example below)
+-   Write in the file 0-O, the big O notations of the time complexity of the Bubble sort algorithm, with 1 notation per line:
+
+### 1. Insertion sort
+
+-   Write a function that sorts a doubly linked list of integers in ascending order using the Insertion sort algorithm
+
+-   Compiling Prototype: void insertion_sort_list(listint_t **list);
+-   You are not allowed to modify the integer n of a node. -    You have to swap the nodes themselves.
+-   You’re expected to print the list after each time you swap two elements (See example below)
+
+### 2. Selection sort
+-   Write a function that sorts an array of integers in ascending order using the Selection sort algorithm
+
+-   Prototype: void selection_sort(int *array, size_t size);
+-   You’re expected to print the array after each time you swap two elements (See example below)
+
+### 3. Quick sort 
+-   Write a function that sorts an array of integers in ascending order using the Quick sort algorithm
+
+-   Compiling Prototype: void quick_sort(int *array, size_t size);
+-   You must implement the Lomuto partition scheme.
+-   The pivot should always be the last element of the partition being sorted.
+
+### 4. Shell sort - Knuth Sequence
+-   Write a function that sorts an array of integers in ascending order using the Shell sort algorithm, using the Knuth sequenc
+
+### 5. Cocktail shaker sort
+-   Write a function that sorts a doubly linked list of integers in ascending order using the Cocktail shaker sort algorithm
 
 
 ## Autors
