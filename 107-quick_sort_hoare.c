@@ -28,22 +28,24 @@ void swap(int *array, size_t size, int *a, int *b)
  * @right:ssize_t with the array right
  * Return: Always integers
  */
-int lomuto(int *array, size_t size, ssize_t left, ssize_t right)
+int hoare(int *array, size_t size, ssize_t left, ssize_t right)
 {
-	ssize_t low = left - 1, fast;
-	int pivot = array[right];
+	size_t i = left - 1, j = right;
+	int pivot = array[left];
 
-	for (fast = left; fast <= right - 1; fast++)
+	while (i < size - 1)
 	{
-		if (array[fast] <= pivot)
-		{
-			low += 1;
-			swap(array, size, &array[low], &array[fast]);
-		}
+		while (array[i] < pivot)
+			i++;
+		while(array[j] > pivot)
+			j--;
+
+		if (i < j)
+			swap(array, size, &array[j], &array[i]);
+		else if (i >= j)
+			break;
 	}
-	/**if (fast > right)**/
-	swap(array, size, &array[low + 1], &array[right]);
-	return (low + 1);
+	return (i + 1);
 }
 
 /**
@@ -59,7 +61,7 @@ void quick_sort_recursion(int *array, size_t size, ssize_t left, ssize_t right)
 
 	if (left < right)
 	{
-		part = lomuto(array, size, left, right);
+		part = hoare(array, size, left, right);
 
 		quick_sort_recursion(array, size, left, part - 1);
 		quick_sort_recursion(array, size, part + 1, right);
@@ -71,7 +73,7 @@ void quick_sort_recursion(int *array, size_t size, ssize_t left, ssize_t right)
  * @array: pointers in integer
  * @size: value data
  */
-void quick_sort(int *array, size_t size)
+void quick_sort_hoare(int *array, size_t size)
 {
 	if (!array || size < 2)
 		return;

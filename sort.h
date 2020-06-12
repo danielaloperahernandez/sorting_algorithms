@@ -4,6 +4,7 @@
 /*Librarys standars*/
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 
 /**
@@ -41,5 +42,9 @@ void shell_sort(int *array, size_t size);
 
 /*Function that sorts a doubly linked list of integers in ascending*/
 void cocktail_sort_list(listint_t **list);
+
+void quick_sort_hoare(int *array, size_t size);
+
+void counting_sort(int *array, size_t size);
 
 #endif /* !_SORT_H_*/
