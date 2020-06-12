@@ -1,5 +1,10 @@
 #include "sort.h"
 
+/**
+ * selection_sort - selection value in array
+ * @array: pointers in integer
+ * @size: value data
+ */
 void selection_sort(int *array, size_t size)
 {
 	size_t i, j;
