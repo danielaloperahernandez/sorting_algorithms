@@ -30,6 +30,27 @@ void swap(int *array, size_t size, int *a, int *b)
  */
 int hoare(int *array, size_t size, ssize_t left, ssize_t right)
 {
+	int pivot;
+	size_t asc = left - 1, des = right + 1;
+
+	pivot = array[right];
+	while(1)
+	{
+		do{
+			asc++;
+		}while(array[asc] < pivot);
+
+		do{
+			des--;
+		}while(array[des] > pivot);
+
+		if (asc >= des)
+			break;
+		swap(array, size, &array[asc], &array[des]);
+	}
+	return (asc);
+}
+	/*
 	size_t i = left - 1, j = right;
 	int pivot = array[left];
 
@@ -46,7 +67,8 @@ int hoare(int *array, size_t size, ssize_t left, ssize_t right)
 			break;
 	}
 	return (i + 1);
-}
+	*/
+
 
 /**
  * quick_sort_recursion - partition scheme.
@@ -62,9 +84,9 @@ void quick_sort_recursion(int *array, size_t size, ssize_t left, ssize_t right)
 	if (left < right)
 	{
 		part = hoare(array, size, left, right);
-
 		quick_sort_recursion(array, size, left, part - 1);
-		quick_sort_recursion(array, size, part + 1, right);
+		quick_sort_recursion(array, size, part, right);
+
 	}
 }
 
