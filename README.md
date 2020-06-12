@@ -34,9 +34,9 @@ What you should learn from this project:
 
 ## Example
 ```
-vagrant@vagrant-ubuntu-trusty-64:~/sorting_algorithms$ 
+vagrant@vagrant-ubuntu-trusty-64:~/sorting_algorithms$
 vagrant@vagrant-ubuntu-trusty-64:~/sorting_algorithms$ gcc -Wall -Wextra -Werror -pedantic 0-bubble_sort.c 0-main.c print_array.c -o bubble
-vagrant@vagrant-ubuntu-trusty-64:~/sorting_algorithms$ ./bubble 
+vagrant@vagrant-ubuntu-trusty-64:~/sorting_algorithms$ ./bubble
 19, 48, 99, 71, 13, 52, 96, 73, 86, 7
 
 19, 48, 71, 99, 13, 52, 96, 73, 86, 7
@@ -62,7 +62,7 @@ vagrant@vagrant-ubuntu-trusty-64:~/sorting_algorithms$ ./bubble
 7, 13, 19, 48, 52, 71, 73, 86, 96, 99
 
 7, 13, 19, 48, 52, 71, 73, 86, 96, 99
-vagrant@vagrant-ubuntu-trusty-64:~/sorting_algorithms$ 
+vagrant@vagrant-ubuntu-trusty-64:~/sorting_algorithms$
 ```
 
 ## Respository Contenst
@@ -75,9 +75,9 @@ Monty Files:
 | 0-bubble_sort.c | Contains the
 | 0-O | It contains the function
 | 1-insertion_sort_list.c | Contains functions math :
-| 1-O |  Contains functions 
+| 1-O |  Contains functions
 | 2-selection_sort.c | It contains other functions
-| 2-O | Contains 
+| 2-O | Contains
 | 3-quick_sort | It is a
 | 3-O | Directory with files test in the program
 | 100-shell_sort |  Contains functions
@@ -123,7 +123,7 @@ The prototypes of all your functions should be included in your header file call
 -   Prototype: void selection_sort(int *array, size_t size);
 -   You’re expected to print the array after each time you swap two elements (See example below)
 
-### 3. Quick sort 
+### 3. Quick sort
 -   Write a function that sorts an array of integers in ascending order using the Quick sort algorithm
 
 -   Compiling Prototype: void quick_sort(int *array, size_t size);
