@@ -50,25 +50,6 @@ int hoare(int *array, size_t size, ssize_t left, ssize_t right)
 	}
 	return (asc);
 }
-	/*
-	size_t i = left - 1, j = right;
-	int pivot = array[left];
-
-	while (i < size - 1)
-	{
-		while (array[i] < pivot)
-			i++;
-		while(array[j] > pivot)
-			j--;
-
-		if (i < j)
-			swap(array, size, &array[j], &array[i]);
-		else if (i >= j)
-			break;
-	}
-	return (i + 1);
-	*/
-
 
 /**
  * quick_sort_recursion - partition scheme.
