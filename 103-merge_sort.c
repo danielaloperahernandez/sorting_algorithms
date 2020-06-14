@@ -68,4 +68,5 @@ void merge_sort(int *array, size_t size)
 		return;
 
 	merge_recursion(new_array, array, 0, size);
+	free(new_array);
 }

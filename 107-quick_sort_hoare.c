@@ -46,7 +46,7 @@ int hoare(int *array, size_t size, ssize_t left, ssize_t right)
 
 		if (asc >= des)
 			break;
-		swap(array, size, &array[asc], &array[des]);
+		swap(array, size, array + asc, array + des);
 	}
 	return (asc);
 }
