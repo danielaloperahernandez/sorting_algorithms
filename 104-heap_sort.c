@@ -30,9 +30,9 @@ void heap_search(int *array, size_t size, size_t down, size_t root)
 {
 	size_t child_left, child_right, max;
 
-	child_left = 2 * root + 1;
-	child_right = 2 * root + 2;
 	max = root;
+	child_left = 2 * max + 1;
+	child_right = 2 * max + 2;
 
 	if (child_left < down && array[child_left] > array[max])
 		max = child_left;
@@ -59,7 +59,7 @@ void heap_sort(int *array, size_t size)
 	if (!array || size < 2)
 		return;
 
-	for (index = (size - 1) / 2; index >= 0; index--)
+	for (index = (size / 2) - 1; index >= 0; index--)
 		heap_search(array, size, size, index);
 
 	for (index = size - 1; index > 0; index--)
