@@ -25,16 +25,16 @@ void swap(int *array, size_t size, int *a, int *b)
  * @array: pointer array in integers
  * @size: ssize with the array
  * @left: ssize with the array left
- * @right int with the array right
+ * @right: int with the array right
  * Return: Always integers
  */
 int hoare(int *array, size_t size, int left, int right)
 {
 	int pivot;
-	size_t asc = left - 1, des = right + 1;
+	int asc, des;
 
 	pivot = array[right];
-	while (1)
+	for (asc = left - 1, des = right + 1; asc < des; )
 	{
 		do {
 			asc++;
@@ -44,9 +44,8 @@ int hoare(int *array, size_t size, int left, int right)
 			des--;
 		} while (array[des] > pivot);
 
-		if (asc >= des)
-			break;
-		swap(array, size, array + asc, array + des);
+		if (asc < des)
+			swap(array, size, array + asc, array + des);
 	}
 	return (asc);
 }
@@ -56,7 +55,7 @@ int hoare(int *array, size_t size, int left, int right)
  * @array: pointer array in integers
  * @size: ssize with the array
  * @left: ssize with the array left
- * @right int with the array right
+ * @right: int with the array right
  */
 void quick_sort_recursion(int *array, size_t size, int left, int right)
 {
