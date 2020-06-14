@@ -1,5 +1,11 @@
 #include "sort.h"
 
+/**
+ * max_num - function reutrn max integer
+ * @array: pointers array
+ * @size: size value the lengeth
+ * Return: integer data
+ */
 int max_num(int *array, int size)
 {
 	int max_num, j;
@@ -12,7 +18,12 @@ int max_num(int *array, int size)
 	return (max_num);
 }
 
-
+/**
+ * counting_sort - function counting function
+ * @array: pointers array
+ * @size: size value the lengeth
+ * Return: integer data
+ */
 void counting_sort(int *array, size_t size)
 {
 	int *count, *final, max, index;

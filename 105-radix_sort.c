@@ -1,5 +1,11 @@
 #include "sort.h"
 
+/**
+ * max_num - function reutrn max integer
+ * @array: pointers array
+ * @size: size value the lengeth
+ * Return: integer data
+ */
 int max_num(int *array, int size)
 {
 	int max_num, j;
@@ -12,7 +18,13 @@ int max_num(int *array, int size)
 	return (max_num);
 }
 
-
+/**
+ * radix_counting - function radix counting data
+ * @array: pointers array
+ * @size: size value the lengeth
+ * @powten: integer data powten
+ * @copy: malloc with copy the array
+ */
 void radix_counting(int *array, size_t size, int powten, int *copy)
 {
 	int count[10] = {0};
@@ -34,7 +46,11 @@ void radix_counting(int *array, size_t size, int powten, int *copy)
 	for (index = 0; index < (int)size; index++)
 		array[index] = copy[index];
 }
-
+/**
+ * radix_sort - function sorting radix
+ * @array: pointers array
+ * @size: size value the lengeth
+ */
 void radix_sort(int *array, size_t size)
 {
 	int max, powten, *copy;
@@ -48,7 +64,7 @@ void radix_sort(int *array, size_t size)
 
 	max = max_num(array, size);
 
-	for (powten = 1; max/powten > 0; powten *= 10)
+	for (powten = 1; max / powten > 0; powten *= 10)
 	{
 		radix_counting(array, size, powten, copy);
 		print_array(array, size);

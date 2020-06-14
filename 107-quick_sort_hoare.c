@@ -21,7 +21,7 @@ void swap(int *array, size_t size, int *a, int *b)
 }
 
 /**
- * lomuto - partition scheme.
+ * hoare - partition scheme.
  * @array: pointer array in integers
  * @size: ssize with the array
  * @left: ssize with the array left
@@ -34,15 +34,15 @@ int hoare(int *array, size_t size, ssize_t left, ssize_t right)
 	size_t asc = left - 1, des = right + 1;
 
 	pivot = array[right];
-	while(1)
+	while (1)
 	{
-		do{
+		do {
 			asc++;
-		}while(array[asc] < pivot);
+		} while (array[asc] < pivot);
 
-		do{
+		do {
 			des--;
-		}while(array[des] > pivot);
+		} while (array[des] > pivot);
 
 		if (asc >= des)
 			break;
@@ -67,12 +67,11 @@ void quick_sort_recursion(int *array, size_t size, ssize_t left, ssize_t right)
 		part = hoare(array, size, left, right);
 		quick_sort_recursion(array, size, left, part - 1);
 		quick_sort_recursion(array, size, part, right);
-
 	}
 }
 
 /**
- * quick_sort - selection value in array
+ * quick_sort_hoare - selection value in array
  * @array: pointers in integer
  * @size: value data
  */
