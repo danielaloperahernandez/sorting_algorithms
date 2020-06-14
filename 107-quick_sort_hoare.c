@@ -59,7 +59,7 @@ int hoare(int *array, size_t size, int left, int right)
  */
 void quick_sort_recursion(int *array, size_t size, int left, int right)
 {
-	size_t part;
+	int part;
 
 	if (left < right)
 	{
