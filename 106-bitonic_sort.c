@@ -26,7 +26,7 @@ void bitonic_swap(int *array, size_t size, size_t size_array, size_t left, char 
 
     if (size_array > 1)
     {
-        for (index = left; index < (int)(left + size_array); index++)
+        for (index = left; index < (int)(left + jump_array); index++)
         {
             if (flags_result == UP && array[index] > array[index + jump_array])
                 swap(array + index, array + index + jump_array);
@@ -47,7 +47,7 @@ void bitonic_recursion(int *array, size_t size, size_t left, size_t size_array, 
     flags_recursion = (flags == UP) ? "UP" : "DOWN";
     if (size_array > 1)
     {
-        printf("Merging [%d/%d] (%s):\n", middle, (int)size, flags_recursion);
+        printf("Merging [%d/%d] (%s):\n", (int)size_array, (int)size, flags_recursion);
         print_array(array + left, size_array);
         bitonic_recursion(array, size, left, middle, UP);
         bitonic_recursion(array, size, left + middle, middle, DOWN);
