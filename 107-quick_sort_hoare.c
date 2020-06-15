@@ -28,10 +28,10 @@ void swap(int *array, size_t size, int *a, int *b)
  * @right: int with the array right
  * Return: Always integers
  */
-int hoare(int *array, size_t size, int left, int right)
+int hoare(int *array, ssize_t size, ssize_t left, ssize_t right)
 {
 	int pivot;
-	int asc, des;
+	ssize_t asc, des;
 
 	pivot = array[right];
 	for (asc = left - 1, des = right + 1; asc < des; )
@@ -57,11 +57,11 @@ int hoare(int *array, size_t size, int left, int right)
  * @left: ssize with the array left
  * @right: int with the array right
  */
-void quick_sort_recursion(int *array, size_t size, int left, int right)
+void quick_sort_recursion(int *array, size_t size, ssize_t left, ssize_t right)
 {
 	int part;
 
-	if (left < right)
+	if (right > left)
 	{
 		part = hoare(array, size, left, right);
 		quick_sort_recursion(array, size, left, part - 1);

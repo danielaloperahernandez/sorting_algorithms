@@ -64,7 +64,7 @@ void heap_sort(int *array, size_t size)
 
 	for (index = size - 1; index > 0; index--)
 	{
-		swap(array, size, array, array + index);
+		swap(array, size, array + 0, array + index);
 		heap_search(array, size, index, 0);
 	}
 }
