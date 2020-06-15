@@ -59,7 +59,7 @@ void heap_sort(int *array, size_t size)
 	if (!array || size < 2)
 		return;
 
-	for (index = (size / 2) - 1; index >= 0; index--)
+	for (index = size / 2 - 1; index >= 0; index--)
 		heap_search(array, size, size, index);
 
 	for (index = size - 1; index > 0; index--)
