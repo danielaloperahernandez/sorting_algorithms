@@ -13,7 +13,6 @@ void swap(int *array, size_t size, int *a, int *b)
 
 	if (*a != *b)
 	{
-		temp = *a;
 		*a = *b;
 		*b = temp;
 		print_array(array, size);
